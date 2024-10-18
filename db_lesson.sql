@@ -104,7 +104,7 @@ ORDER BY
 
 //Q7
 
-SELECT name, age, gender FROM people WHERE age BETWEEN 20 AND 29 and gender = 2 or age BETWEEN 40 AND 49 and gender = 1;
+SELECT name FROM people WHERE age BETWEEN 20 AND 29 and gender = 2 or age BETWEEN 40 AND 49 and gender = 1;
 
 //Q8
 
@@ -112,15 +112,15 @@ SELECT name, age, department_id FROM people WHERE department_id = 1 ORDER BY age
 
 //Q9
 
-SELECT AVG(age) AS average_age, department_id, gender FROM people WHERE department_id = 2 AND gender = 2;
+SELECT AVG(age) AS average_age FROM people WHERE department_id = 2 AND gender = 2;
 
 //Q10
 
-SELECT departments.departmentsname, people.name, reports.content FROM people INNER JOIN departments ON people.department_id = departments.department_id INNER JOIN reports ON people.person_id = reports.person_id;
+SELECT departments.name, people.name, reports.content FROM people INNER JOIN departments ON people.department_id = departments.department_id INNER JOIN reports ON people.person_id = reports.person_id;
 
 //Q11
 
-SELECT people.name, reports.content FROM people LEFT OUTER JOIN reports ON people.person_id = reports.person_id WHERE reports.content IS NULL;
+SELECT people.name FROM people LEFT OUTER JOIN reports ON people.person_id = reports.person_id WHERE reports.content IS NULL;
  
 
 
