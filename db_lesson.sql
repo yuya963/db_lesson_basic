@@ -108,7 +108,7 @@ SELECT name FROM people WHERE age BETWEEN 20 AND 29 and gender = 2 or age BETWEE
 
 //Q8
 
-SELECT name, age, department_id FROM people WHERE department_id = 1 ORDER BY age;
+SELECT name FROM people WHERE department_id = 1 ORDER BY age;
 
 //Q9
 
